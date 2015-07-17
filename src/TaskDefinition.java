@@ -22,19 +22,27 @@ public class TaskDefinition {
         System.out.println("Hello World!");
 
         int secondNameFirstLetter = 'C';
-        int remainderOfDivision;
+        int remainderOfDivisionSecondName;
 
-        remainderOfDivision = secondNameFirstLetter % 4;
+        remainderOfDivisionSecondName = secondNameFirstLetter % 4;
 
         System.out.println("Code of first letter of second name is " + secondNameFirstLetter);
-        System.out.println("Remainder of division on 4 is " + remainderOfDivision);
+        System.out.println("Remainder of division on 4 is " + remainderOfDivisionSecondName);
 
         int remainderOfDivisionTask;
 
-        for (int i = 0; i < 57; i++) {
+        for (int task = 0; task < 57; task++) {
 
-            if (i % 4 == remainderOfDivision) {
-                System.out.println("Task: " + i);
+            remainderOfDivisionTask = task % 4;
+
+            boolean myTask = false;
+
+            if (remainderOfDivisionTask == remainderOfDivisionSecondName) {
+                myTask = true;
+            }
+
+            if (myTask) {
+                System.out.println("Task: " + task);
             }
         }
     }
